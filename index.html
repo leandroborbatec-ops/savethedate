@@ -2,15 +2,16 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Save The Date - 15 Anos</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+
     <div id="petals-container"></div>
 
-    <div class="video-bg">
+    <div class="video-bg-container">
         <div class="overlay"></div>
         <video autoplay muted loop playsinline webkit-playsinline id="bg-video">
             <source src="midia/video.mp4" type="video/mp4">
@@ -18,26 +19,34 @@
     </div>
 
     <div class="main-content">
-        <h1 class="gold-title">Save The Date!</h1>
-        <h2 class="date-text">01/03/2026</h2>
+        <header>
+            <h1 class="gold-title">Save The Date!</h1>
+            <h2 class="date-subtitle">01/03/2026</h2>
+        </header>
 
-        <div class="gallery">
-            <div class="photo side"><img src="midia/foto1.jpg"></div>
-            <div class="photo main"><img src="midia/foto2.jpg"></div>
-            <div class="photo side"><img src="midia/foto3.jpg"></div>
+        <section class="gallery-container">
+            <div class="photo-item side"><img src="midia/foto1.jpg" alt="Foto 1"></div>
+            <div class="photo-item main-img"><img src="midia/foto2.jpg" alt="Foto Principal"></div>
+            <div class="photo-item side"><img src="midia/foto3.jpg" alt="Foto 3"></div>
+        </section>
+
+        <section class="countdown-wrapper">
+            <div class="time-unit"><span id="days">00</span><p>Dias</p></div>
+            <div class="time-unit"><span id="hours">00</span><p>Horas</p></div>
+            <div class="time-unit"><span id="minutes">00</span><p>Min</p></div>
+            <div class="time-unit"><span id="seconds">00</span><p>Seg</p></div>
+        </section>
+
+        <div class="venue-info">
+            <p>Ballroom Barra Olímpica</p>
         </div>
 
-        <div class="countdown">
-            <div class="box"><span id="days">00</span><p>Dias</p></div>
-            <div class="box"><span id="hours">00</span><p>Horas</p></div>
-            <div class="box"><span id="minutes">00</span><p>Min</p></div>
-            <div class="box"><span id="seconds">00</span><p>Seg</p></div>
-        </div>
-
-        <p class="venue">Ballroom Barra Olímpica</p>
-        
-        <button id="music-btn">Ouvir Música 🎵</button>
-        <audio id="bg-audio" loop><source src="midia/musica.mp3" type="audio/mpeg"></audio>
+        <footer>
+            <button id="music-btn">Ouvir Música 🎵</button>
+            <audio id="bg-audio" loop>
+                <source src="midia/musica.mp3" type="audio/mpeg">
+            </audio>
+        </footer>
     </div>
 
     <script src="script.js"></script>
